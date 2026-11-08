@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+    <div class="logo">🛡️</div>
+    <div>
+      <h1>PhishGuard</h1>
+      <p class="subtitle">AI EMAIL SECURITY</p>
+    </div>
+    </header>
+    <!-- Status -->
+    <div class="status">
+        <span class="status-dot"></span>
+        Extension Active
+    </div>
+    <!-- Analysis Results -->
+    <section id="report" hidden>
+      <!-- Risk summary -->
+      <div id="riskCard" class="risk-card">
+        <p>OVERALL THREAT LEVEL</p>
+        <h2 id="riskLevel">UNKNOWN</h2>
+        <p id="riskSummary"></p>
+      </div>
+      <!-- Email details -->
+      <div class="analysis-card">
+        <h3 id="emailSubject"></h3>
+        <p id="emailSender"></p>
+      </div>  
+      <!-- URL results -->
+      <div class="analysis-card">
+        <h3>🔗 URL Reputation</h3>
+        <p id="urlStatus"></p>
+      </div>
+      <!-- Gemini results -->
+      <div class="analysis-card">
+        <h3>✦ AI Security Findings</h3>
+        <ul id="indicators"></ul>
+      </div>
+      <!-- Explanation -->
+      <div class="analysis-card">
+        <h3>Analysis Summary</h3>
+        <p id="aiExplanation"></p>
+      </div>
+    </section>
+    <!-- Analysis Button -->
+    <button id="testBtn">Analyze Email</button>
+    <!-- Status/error messages -->
+    <p id="result" role="status" aria-live="polite">
+      Open a Gmail email to begin.
+    </p>
+    <footer>
+      Google Safe Browsing + Gemini AI
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

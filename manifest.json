@@ -1,0 +1,23 @@
+{
+  "name": "PhishGuard",
+  "description": "Detects phishing emails within gmail By: Luca Lofranco",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "Logo.png"
+  },
+  "permissions":[
+    "activeTab"
+  ],
+    "host_permissions": [
+    "https://mail.google.com/*",
+    "http://127.0.0.1:3000/*"
+  ],
+  "content_scripts": [
+  {
+    "matches": ["https://mail.google.com/*"],
+    "js": ["content.js"]
+  }
+]
+}

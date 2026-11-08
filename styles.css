@@ -1,0 +1,290 @@
+/* Global styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 360px;
+    background: #0b1220;
+    color: #f1f5f9;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #163c3b;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin: 4px 0 0;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+/* Extension status */
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #5ee0b1;
+    margin-bottom: 20px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #5ee0b1;
+    border-radius: 50%;
+}
+
+/* Report */
+.report {
+    margin-bottom: 18px;
+}
+
+.report[hidden] {
+    display: none;
+}
+
+.report > h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Email information */
+.email-info {
+    background: #131f31;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.email-info p {
+    margin: 5px 0;
+    overflow-wrap: anywhere;
+    color: #cbd5e1;
+}
+
+/* Risk indicator */
+.risk-card {
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #475569;
+    background: #1e293b;
+}
+
+.risk-card p {
+    margin: 0 0 8px;
+    font-size: 12px;
+}
+
+.risk-card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.risk-card.high {
+    background: #3b2028;
+    border-color: #9f424c;
+    color: #ff999f;
+}
+
+.risk-card.medium {
+    background: #3a2d19;
+    border-color: #ac782d;
+    color: #fbbf75;
+}
+
+.risk-card.low {
+    background: #163c31;
+    border-color: #327e60;
+    color: #68e0ae;
+}
+
+/* Analysis cards */
+.analysis-card {
+    background: #131f31;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.analysis-card h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.analysis-card p {
+    color: #cbd5e1;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.analysis-card ul {
+    padding-left: 18px;
+    color: #cbd5e1;
+}
+
+.analysis-card li {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 13px;
+    background: #5ee0b1;
+    color: #0b1220;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #40c79a;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Status messages */
+#result {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #94a3b8;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    color: #64748b;
+    text-align: center;
+    font-size: 10px;
+}
+
+
+/* Hide report until analysis finishes */
+.report[hidden],
+#report[hidden] {
+    display: none;
+}
+
+/* Main report layout */
+#report {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+/* Report cards */
+.analysis-card {
+    background: #152235;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.analysis-card h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.analysis-card p {
+    margin: 0;
+    color: #b4c3d6;
+    line-height: 1.6;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* Risk card */
+.risk-card {
+    border: 1px solid #475569;
+    border-radius: 12px;
+    padding: 16px;
+    background: #1e293b;
+}
+
+.risk-card p {
+    margin: 0 0 8px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.risk-card h2 {
+    margin: 0 0 10px;
+    font-size: 25px;
+}
+
+.risk-card.high {
+    background: #351e28;
+    border-color: #904451;
+    color: #ff9ca5;
+}
+
+.risk-card.medium {
+    background: #3a2d19;
+    border-color: #ac782d;
+    color: #fbbf75;
+}
+
+.risk-card.low {
+    background: #17362f;
+    border-color: #327e60;
+    color: #67e3b5;
+}
+
+/* AI indicators */
+#indicators {
+    padding-left: 18px;
+    margin: 0;
+}
+
+#indicators li {
+    color: #cbd5e1;
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+#indicators li:last-child {
+    margin-bottom: 0;
+}
